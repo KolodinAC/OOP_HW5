@@ -11,7 +11,12 @@ public class Cat extends Animal{
 
     @Override
     public String voice() {
-        return "Мяу";
+        return "Издает звук: Мяу";
+    }
+
+    @Override
+    public String toString() {
+        return "Кошка " + super.toString();
     }
 
     
