@@ -1,7 +1,7 @@
 package Seminar_2;
 
-public class Radio {
-    public String radioVoice() {
+public class Radio implements Speakable {
+    public String voice() {
         return "Добро пожаловать !";
     }
     
