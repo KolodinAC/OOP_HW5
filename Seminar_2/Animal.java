@@ -1,6 +1,6 @@
 package Seminar_2;
 
-public abstract class Animal {
+public abstract class Animal implements Speakable {
 
     private String name;
     private int box;
