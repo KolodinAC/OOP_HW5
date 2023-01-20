@@ -8,8 +8,11 @@ public class Horse extends Animal {
 
     @Override
     public String voice() {
-        return "И-ГО-ГО";
+        return "Издает звук: И-ГО-ГО";
     }
     
-    
+    @Override
+    public String toString() {
+        return  "Конь " + super.toString();
+    }
 }
