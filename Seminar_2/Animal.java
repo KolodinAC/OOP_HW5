@@ -12,7 +12,7 @@ public abstract class Animal {
     
     @Override
     public String toString() {
-        return String.format("Кличка: %s Клетка: %d", this.name, this.box);
+        return String.format("по кличке: %s , сидит в клетке под номером: %d", this.name, this.box);
     }
 
     public abstract String voice();
