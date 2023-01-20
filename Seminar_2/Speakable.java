@@ -1,6 +1,7 @@
 package Seminar_2;
 // Делаем интерфейс
 
-public class Speakable {
+public interface Speakable {
+    public String voice();
     
 }
