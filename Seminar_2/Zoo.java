@@ -58,6 +58,28 @@ public class Zoo {
         
     }
 
+    public List<Swimable> getSwimables(){
+        List<Swimable> result = new ArrayList<Swimable>();
+        for(Animal an : animals) {
+            if (an instanceof Swimable){
+                result.add((Swimable)an);
+            }
+            
+        }
+        return result;
+    }
+
+    public int getMaxSwimspeed() {
+        int max = 0;
+        for (Swimable runner : getSwimables()) {
+            if(max < runner.speedofSwim()){
+                max = runner.speedofSwim();
+            }
+        }
+        return max;
+    }
+
+
     public ArrayList<Animal> getAnimals() {
             return animals;
         }
