@@ -2,7 +2,7 @@ package Seminar_2;
 
 public class Radio implements Speakable {
     public String voice() {
-        return "Добро пожаловать !";
+        return "Всегда звучит в колонках: Добро пожаловать !";
     }
     
 }
