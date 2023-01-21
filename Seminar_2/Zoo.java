@@ -24,8 +24,44 @@ public class Zoo {
         return answer;
 
     }
+    public List<Runable> getRunables(){
+        List<Runable> result = new ArrayList<Runable>();
+        for(Animal an : animals) {
+            if (an instanceof Runable){
+                result.add((Runable)an);
+            }
+            
+        }
+        return result;
+        
+    }
+
+    public int getMaxspeed() {
+        int max = 0;
+        for (Runable runner : getRunables()) {
+            if(max < runner.speedofRun()){
+                max = runner.speedofRun();
+            }
+        }
+        return max;
+    }
+
+    public List<Flyable> getFLyers(){
+        List<Flyable> result = new ArrayList<Flyable>();
+        for(Animal an : animals) {
+            if (an instanceof Flyable){
+                result.add((Flyable)an);
+            }
+            
+        }
+        return result;
+        
+    }
+
     public ArrayList<Animal> getAnimals() {
             return animals;
         }
+
+    
 
 }
