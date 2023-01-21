@@ -5,7 +5,8 @@ public class Main {
         Zoo zoo1 = new Zoo();
         zoo1.addAnimal(new Cat("Васька", 1, "серый"))
                 .addAnimal(new Horse("Серебряный", 25))
-                .addAnimal(new Duck("Утя", 17));
+                .addAnimal(new Duck("Утя", 17))
+                .addAnimal(new Pingwin("Ковальски", 33));
 
         for (Animal an : zoo1.getAnimals()) {
             System.out.println(an);
@@ -32,9 +33,23 @@ public class Main {
         System.out.println(String.format("Максимальная скорость которую развивают животные: %d", max));
 
         System.out.println("-------------------");
+
         for (Flyable flyable : zoo1.getFLyers()) {
-            System.out.printf("Cкорость полета : %d", flyable.speedofFly());
+            System.out.printf("Cкорость полета : %d", + flyable.speedofFly());
         }
+
+        System.out.println("\n-------------------");
+
+        for (Swimable swim : zoo1.getSwimables()) {
+            System.out.println("Плавают со скоростью: "  + swim.speedofSwim());
+            
+        }
+
+        int maxs = zoo1.getMaxSwimspeed();
+        System.out.printf("Максимальная скорость с которой плавают: % d", maxs);
+
+
+
 
 
     }
