@@ -74,7 +74,7 @@ public class RepositoryFile implements Repository {
         return id;
     }
     @Override
-    public void delUser(User users) {
+    public void delUser(User user) {
         List<String> lines = new ArrayList<>();
         List<User> users = getAllUsers();
         for (User item: users) {
